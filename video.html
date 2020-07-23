@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			border: 0;
+			box-sizing: border-box;
+		}
+		html,body,.video-js{
+			width: 100%;
+			height: 100%;
+		}
+		
+	</style>
+	
+	<link href="css/video-js.css" rel="stylesheet" />
+	
+<!--	 If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<!--	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>-->
+</head>
+<body>
+
+
+
+
+<!--		<video controls="play" muted playsinline>-->
+<!--			<source src="media/WWII-footage.mp4"-->
+<!--			        type="video/mp4">-->
+<!--			-->
+<!--			Sorry, your browser doesn't support embedded videos.-->
+<!--		</video>-->
+		
+		
+		<video
+				  id="my-video"
+				  class="video-js"
+				  controls
+				  preload="auto"
+				  data-setup="{}"
+		>
+			<source src="media/WWII-footage.mp4" type="video/mp4" />
+
+		</video>
+		
+		<script src="js/video.js"></script>
+</body>
+</html>

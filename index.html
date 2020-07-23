@@ -1,150 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-	
-	html{font-size:70%}@media screen and (min-width:112.5em){html{font-size:105%}}@media screen and (min-width:131.25em){html{font-size:105%}}@media screen and (min-width:131.25em) and (min-width:150em){html{font-size:100%}}@media screen and (min-width:168.75em){html{font-size:100%}}@media screen and (min-width:187.5em){html{font-size:112.5%}}@media screen and (min-width:206.25em){html{font-size:125%}}@media screen and (min-width:225em){html{font-size:137.5%}}@media screen and (min-width:237.5em){html{font-size:150%}}@media screen and (min-width:250em){html{font-size:157%}}@media screen and (max-width:75em){html{font-size:65%}}@media screen and (max-width:53.125em){html{font-size:57%}}
-	
-	
-	
-	
-	
-	@font-face {
-		font-family: "Noteworthy-Light";
-		src: url("./fonts/Noteworthy-Lt.eot"); /* IE9 Compat Modes */
-		src: url("./fonts/Noteworthy-Lt.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-		url("./fonts/Noteworthy-Lt.otf") format("opentype"), /* Open Type Font */
-		url("./fonts/Noteworthy-Lt.svg") format("svg"), /* Legacy iOS */
-		url("./fonts/Noteworthy-Lt.ttf") format("truetype"), /* Safari, Android, iOS */
-		url("./fonts/Noteworthy-Lt.woff") format("woff"), /* Modern Browsers */
-		url("./fonts/Noteworthy-Lt.woff2") format("woff2"); /* Modern Browsers */
-		font-weight: normal;
-		font-style: normal;
-	}
-	
-	*{
-		margin: 0;
-		padding: 0;
-		border: 0;
-		box-sizing: border-box;
-		font-family: "Noteworthy-Light","Avenir Next Medium", sans-serif;
-		
-	}
-	#book{
-		/*border: 1px solid red;*/
-		overflow: hidden;
-	}
-	
-	.my-page{
-		padding: 3rem 2rem 2rem 4.5rem;
-		overflow: hidden;
-	}
-	
-	
-	.my-page:after{
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index: -1;
-		background-size: cover!important;
-	}
-	
-	
-	
-	
-	
-	
-	/*.my-page:after{*/
-	/*	background: url("img/3553605621_e4282bcb6c_o.jpg") no-repeat;*/
-	/*}*/
-	
-	
-	
-	.my-page:nth-child(odd):after{
-		background: url("img/pageBg-odd.jpg") no-repeat;
-	}
-	.my-page:nth-child(even):after{
-		background: url("img/pageBg-even.jpg") no-repeat;
-	}
-	
-	/*.my-page:nth-child(even):first-child:after{*/
-	/*	background: red no-repeat!important;*/
-	/*}*/
-	
-	
-	div#firstPage:after{
-		background: url("img/oldBg.jpg") no-repeat;
-	}
-	
-	div#lastPage:after{
-		background: url("img/oldBg.jpg") no-repeat;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	h1{
-		font-size: 3rem;
-		/* margin: 0 0 20px; */
-		height: 10%;
-		min-height: 5rem;
-		/* border: 1px solid; */
-		max-height: 6rem;
-	}
-	
-	p{
-		font-size: 1.4rem;
-		color: black;
-	}
-	
-	
-	.center{
-		display: flex;
-		flex-direction: column;
-		justify-content:center;
-		align-items: center;
-		height: 90%;
-		max-height: 90%;
-		transform: translate(-1rem,1rem);
-	}
-	
-	
-	img {
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-		margin: 10px auto;
-		display: block;
-	}
-	
-	.img-half{
-		width: 70%;
-	}
-
-
-</style>
 <head>
 	<meta charset="UTF-8">
 	<title>Page Flip Js</title>
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 
 
 <div id="book">
-	<div class="my-page firstPage" id="firstPage" data-density="hard">
+	<div class="my-page firstPage" id="firstPage" data-density="soft" >
 		<div class="center">
 			<h1>
 				History Book
@@ -160,7 +26,14 @@
 		<h1>
 			World War
 		</h1>
-		<img src="img/slider1.jpg" alt="">
+		<!--		<img src="img/slider1.jpg" alt="">-->
+		
+		<iframe src="video.html" allow="accelerometer; encrypted-media; gyroscope; " allowfullscreen></iframe>
+		
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci assumenda atque, beatae consequatur dicta dolorem doloribus eveniet incidunt minus numquam porro praesentium, quidem rem soluta sunt temporibus veritatis vitae?
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda autem blanditiis, eos eveniet excepturi harum ipsam laborum molestias nihil nisi odit optio perspiciatis provident, quam saepe sunt voluptates voluptatibus?
+		</p>
 	</div>
 	<div class="my-page">
 		<h1>
@@ -259,7 +132,7 @@
 	</p>
 </div>
 	
-	<div class="my-page" id="lastPage" data-density="hard">
+	<div class="my-page lastPage" id="lastPage" data-density="soft">
 		<h1 class="center">
 			Last page
 		
@@ -268,29 +141,86 @@
 </div>
 
 
-
-
-<script src="./page-flip.browser.js"></script>
+<script src="js/page-flip.browser.js"></script>
 
 <script>
 	
-	const width=Number(window.innerWidth),
-		   height=Number(window.innerHeight)*1.9;
 	
-	console.log(width,height);
-	
-    const pageFlip = new St.PageFlip(document.getElementById('book'),
-        {
-            width: width, // required parameter - base page width
-            height: height,  // required parameter - base page height
-            showCover: true,
-            size:'stretch',
-            drawShadow:false
-        }
-    );
-    
 
-    pageFlip.loadFromHTML(document.querySelectorAll('.my-page'));
+    document.addEventListener('DOMContentLoaded', function() {
+
+        const width = Number(window.innerWidth),
+            height = Number(window.innerHeight) * 2;
+
+        console.log(width, height);
+
+        const pageFlip = new St.PageFlip(document.getElementById('book'),
+            {
+                width: width, // base page width
+                height: height, // base page height
+                showCover: true,
+                size: 'stretch',
+                drawShadow: false,
+                mobileScrollSupport:false
+            }
+        );
+
+        let allPages=document.querySelectorAll('.my-page');
+
+        let pageLengthAcordIndex=allPages.length-1;
+        
+        pageFlip.loadFromHTML(allPages);
+
+        console.log(allPages)
+
+        // console.log(pageFlip)
+        // // triggered by page turning
+        pageFlip.on("flip", (e) => {
+            // console.log('flipped')
+        });
+		  //
+        // // triggered when the state of the book changes
+        pageFlip.on("changeState", (e) => {
+            let ab=e.object;
+            
+            
+            setTimeout(()=>{
+                if(e.object.flipController.flippingPage) {
+                    if (e.data === 'user_fold' &&
+                        pageFlip.getCurrentPageIndex() === 1 &&
+                        e.object.flipController.flippingPage.element.classList.contains('firstPage')
+                    ) {
+                        pageFlip.flip(0, 'top');
+                    }else  if (e.data === 'user_fold' &&
+                        pageFlip.getCurrentPageIndex() === pageLengthAcordIndex-2 &&
+                        e.object.flipController.flippingPage.element.classList.contains('lastPage')
+                    ) {
+                        pageFlip.flip(pageLengthAcordIndex, 'top');
+                    }
+                }
+            },10);
+            
+            
+            // console.log(e.object.checkDirection());
+            
+            // console.log('current Page=',pageFlip.getCurrentPageIndex());
+            
+            if(e.object.flipController.flippingPage) {
+                if (e.data === 'user_fold' &&
+                    pageFlip.getCurrentPageIndex() === 1 &&
+                    e.object.flipController.flippingPage.element.classList.contains('firstPage')
+                ) {
+                    pageFlip.flip(0, 'top');
+                }
+            }
+	           
+        });
+		  //
+        // // triggered when page orientation changes
+        // pageFlip.on("changeOrientation", (e) => {
+        //     document.querySelector(".page-orientation").innerText = e.data;
+        // });
+    });
 </script>
 
 </body>

@@ -1,0 +1,145 @@
+
+html{font-size:70%}@media screen and (min-width:112.5em){html{font-size:105%}}@media screen and (min-width:131.25em){html{font-size:105%}}@media screen and (min-width:131.25em) and (min-width:150em){html{font-size:100%}}@media screen and (min-width:168.75em){html{font-size:100%}}@media screen and (min-width:187.5em){html{font-size:112.5%}}@media screen and (min-width:206.25em){html{font-size:125%}}@media screen and (min-width:225em){html{font-size:137.5%}}@media screen and (min-width:237.5em){html{font-size:150%}}@media screen and (min-width:250em){html{font-size:157%}}@media screen and (max-width:75em){html{font-size:65%}}@media screen and (max-width:53.125em){html{font-size:57%}}
+
+
+
+
+
+@font-face {
+    font-family: "Noteworthy-Light";
+    src: url("../fonts/Noteworthy-Lt.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/Noteworthy-Lt.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/Noteworthy-Lt.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/Noteworthy-Lt.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/Noteworthy-Lt.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/Noteworthy-Lt.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/Noteworthy-Lt.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Noteworthy-Light","Avenir Next Medium", sans-serif;
+
+}
+#book{
+    /*border: 1px solid red;*/
+    overflow: hidden;
+    /*padding: 100px;*/
+    /*display: none;*/
+}
+
+
+.my-page{
+    padding: 3rem 2rem 2rem 4.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+
+.my-page:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-size: cover!important;
+}
+
+
+
+
+
+
+
+/*.my-page:after{*/
+/*	background: url("img/3553605621_e4282bcb6c_o.jpg") no-repeat;*/
+/*}*/
+
+
+
+.my-page:nth-child(odd):after{
+    background: url("../img/pageBg-odd.jpg") no-repeat;
+}
+.my-page:nth-child(even):after{
+    background: url("../img/pageBg-even.jpg") no-repeat;
+}
+
+/*.my-page:nth-child(even):first-child:after{*/
+/*	background: red no-repeat!important;*/
+/*}*/
+
+
+div#firstPage:after{
+    background: url("../img/oldBg.jpg") no-repeat;
+}
+
+div#lastPage:after{
+    background: url("../img/oldBg.jpg") no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1{
+    font-size: 3rem;
+    /* margin: 0 0 20px; */
+    height: 10%;
+    min-height: 5rem;
+    /* border: 1px solid; */
+    max-height: 6rem;
+}
+
+p{
+    font-size: 1.4rem;
+    color: black;
+}
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 90%;
+    max-height: 90%;
+    transform: translate(-1rem,1rem);
+}
+
+
+img,video,iframe {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+.img-half{
+    width: 70%;
+}
+
+iframe{
+    height: 54%!important;
+}
+
+
+
+
+
+
