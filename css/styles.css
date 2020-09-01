@@ -34,14 +34,14 @@ html{font-size:70%}@media screen and (min-width:112.5em){html{font-size:105%}}@m
 }
 
 
-.my-page{
+.firstPage{
     padding: 3rem 2rem 2rem 4.5rem;
     overflow: hidden;
     margin-bottom: 1rem;
 }
 
 
-.my-page:after{
+.firstPage:after,.lastPage:after{
     content: '';
     display: block;
     width: 100%;
@@ -53,6 +53,13 @@ html{font-size:70%}@media screen and (min-width:112.5em){html{font-size:105%}}@m
     background-size: cover!important;
 }
 
+
+
+
+
+.my-page img{
+    height: 100%;
+}
 
 
 
